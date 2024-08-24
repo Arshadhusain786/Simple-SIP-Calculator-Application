@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SIP Calculator</title>
+</head>
+<body>
+<h1>SIP Calculator</h1>
+<form th:action="@{/calculate}" th:object="${parameter}" method="post">
+    <label for="principal">Principal Amount:</label>
+    <input type="text" id="principal" th:field="*{principal}" /><br/>
+
+    <label for="rate">Annual Interest Rate (%):</label>
+    <input type="text" id="rate" th:field="*{rate}" /><br/>
+
+    <label for="noOfYears">Number of Years:</label>
+    <input type="text" id="noOfYears" th:field="*{noOfYears}" /><br/>
+
+    <button type="submit">Calculate</button>
+</form>
+</body>
+</html>
